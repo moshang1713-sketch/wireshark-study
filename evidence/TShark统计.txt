@@ -1,0 +1,25 @@
+================================================================================
+TCP Conversations
+Filter:<No Filter>
+                                                           |       <-      | |       ->      | |     Total     |    Relative    |   Duration   |
+                                                           | Frames  Bytes | | Frames  Bytes | | Frames  Bytes |      Start     |              |
+10.110.238.17:19675        <-> 110.242.69.21:80               508 763 kB         46 2767 bytes     554 765 kB        3.575817900         0.2498
+10.110.238.17:19664        <-> 104.20.23.154:80                 6 1283 bytes       6 485 bytes      12 1768 bytes     2.205162100         1.5202
+================================================================================
+
+===================================================================
+Protocol Hierarchy Statistics
+Filter: 
+
+frame                                    frames:584 bytes:777713
+  eth                                    frames:584 bytes:777713
+    arp                                  frames:2 bytes:102
+    ip                                   frames:582 bytes:777611
+      icmp                               frames:8 bytes:2608
+      data                               frames:4 bytes:6056
+      udp                                frames:4 bytes:1233
+        dns                              frames:4 bytes:1233
+      tcp                                frames:566 bytes:767714
+        http                             frames:4 bytes:1958
+          data-text-lines                frames:2 bytes:1574
+===================================================================

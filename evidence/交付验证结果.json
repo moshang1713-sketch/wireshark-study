@@ -1,0 +1,41 @@
+{
+  "protected_files": 44,
+  "input_manifest_entries": 42,
+  "markdown_images": {
+    "README_先看我.md": 0,
+    "Wireshark_答辩演示版_补充后.md": 21,
+    "Wireshark_逐图学习版_补充后.md": 25,
+    "补拍证据登记表.md": 0,
+    "验收报告与未完成项.md": 0
+  },
+  "png_files": 27,
+  "eight_part_learning_cards": 25,
+  "key_field_assertions": "PASS",
+  "source_capture_equals_submission_copy": true,
+  "browser": {
+    "a": {
+      "images": 21,
+      "decoded": 21,
+      "overflow": false
+    },
+    "b": {
+      "images": 25,
+      "decoded": 25,
+      "overflow": false
+    }
+  },
+  "visual_review": {
+    "defense": "中文开头、S04原HTML章节的图片和图下注释可见",
+    "learning": "S06原HTML章节图片与八项解析可见",
+    "scope": "全页DOM检查+原HTML章节临时独立视口抽查，未逐页人工检查",
+    "headless_scroll_screenshot": "滚动后截图空白；改用未滚动章节抽查，未把空白截图当成果",
+    "temporary_preview_files_in_zip": false
+  },
+  "original_assets": {
+    "preserved_locally": 21,
+    "unaltered_in_delivery": 20,
+    "explicit_privacy_derivative": 1,
+    "supplemental_unaltered": 6
+  },
+  "timestamp_utc8": "2026-11-16T21:25:06.417024"
+}

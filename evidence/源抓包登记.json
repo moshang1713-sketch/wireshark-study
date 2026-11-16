@@ -1,0 +1,10 @@
+{
+  "path": "原件仅本地保留，公开页面省略绝对路径",
+  "bytes": 798024,
+  "modified_local": "2026-11-10T13:40:50.561743",
+  "sha256": "b1b59233186ef23556ded33bdc3c9d69b266da9e2468b13a0560a8b11c962519",
+  "frames": 584,
+  "analysis": "TShark 4.6.9 -2，两遍解析；GUI离线打开，不重新采集",
+  "raw_capture_in_zip": false,
+  "reason": "百度HTTP响应存在Set-Cookie，原始文件只留本地，不进入便携展示包"
+}

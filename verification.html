@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>验收报告与未完成项</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>html{font:18px/1.7 "Microsoft YaHei",sans-serif;color:#1d2733;background:#f6f8fb}body{max-width:1400px;margin:30px auto;padding:35px;background:white}img{max-width:100%;height:auto;display:block}h1,h2,h3{line-height:1.3}h2{margin-top:2em;border-bottom:2px solid #ddd;padding-bottom:10px}blockquote{border-left:4px solid #2687ac;padding:8px 20px;margin-left:0;background:#edf6fa}table{border-collapse:collapse;font-size:.9em;max-width:100%}td,th{border:1px solid #c9d2dc;padding:6px;overflow-wrap:anywhere}code{overflow-wrap:anywhere}a{color:#146694}pre{white-space:pre-wrap}</style>
+</head>
+<body><nav style="padding:12px;background:#edf6fa"><a href="index.html">资料首页</a> · <a href="defense.html">答辩演示版</a> · <a href="learn.html">零基础学习版</a> · <a href="evidence.html">截图与操作证据</a></nav>
+<header id="title-block-header">
+<h1 class="title">验收报告与未完成项</h1>
+</header>
+<h1 id="验收报告与未完成项">验收报告与未完成项</h1>
+<p>执行日期：2026-11-16（UTC+8）。交付定位：历史实验的真实软件视图补拍、答辩演示与零基础学习。任务依据：用户明确要求执行的本任务包根目录
+CODEX_TASK.md；项目较早 CODEX_TASK.md
+属于既往采集修复任务，不据其扩大本轮范围。</p>
+<h2 id="实际结果">实际结果</h2>
+<p>已找到并只读核对权威抓包：<code>evidence/final_npcap/capture.pcapng</code>，798024
+B、584帧，SHA-256 为
+<code>b1b59233186ef23556ded33bdc3c9d69b266da9e2468b13a0560a8b11c962519</code>。路径与修改时间详见
+<a
+href="evidence/源抓包登记.json">源登记</a>。其散列与本地修订版提交材料的同名副本相同。</p>
+<p>P0 的 Follow TCP Stream、Protocol Hierarchy、TCP Conversations
+均已真实补拍；P1
+IPv4重组已完成；P2第579帧与35—37同流及重组关联已验证并补拍。Flow
+Graph也实际生成截图，但窄列文字截断，列为“已拍、可读性受限”，只用于学习版顺序辅助。共6张新截图，每张均附实际操作、源文件、范围、结论、隐私说明及指纹。</p>
+<p>答辩版沿用原11环节、17张关键图，增加S01—S04，合计21处图片引用；学习版沿用原19处关键图并加入6张新图，合计25处，每图完整八项解析。两版均附过滤器、证据边界与官方参考。额外提供同内容HTML离线预览。</p>
+<h2 id="逐条验收">逐条验收</h2>
+<table>
+<thead>
+<tr>
+<th>任务书条目</th>
+<th>实测结果与范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原21图及基线不被破坏</td>
+<td>原图21项SHA-256均匹配来源清单；输入包42项清单逐项校验；解压输入与源抓包保护快照复核。交付副本20图原样复制，图20为隐私遮挡衍生图，原件不动、不公开打包。</td>
+</tr>
+<tr>
+<td>两份补充Markdown存在且定位不同</td>
+<td>答辩保留11环节与简短讲词；学习版25图各八项模板，含操作验收及10道带解析复习。</td>
+</tr>
+<tr>
+<td>新增图可追溯</td>
+<td>S01—S06均为真实Wireshark窗口；未编辑新截图；登记表逐项包含操作、过滤器、范围、结论及SHA-256。</td>
+</tr>
+<tr>
+<td>失败或限制真实记录</td>
+<td>默认沙箱ImageGrab截图失败；交互桌面访问后真实取证成功。S05标签截断限制保留说明；未把桌面调试图、CLI输出或示意图冒充Wireshark截图。</td>
+</tr>
+<tr>
+<td>不混三组样本</td>
+<td>example.com为stream0、19664端口；百度为stream1、19675端口；9—11是网关ICMP分片，分别讲解。</td>
+</tr>
+<tr>
+<td>字段与数学准确</td>
+<td>TShark两遍解析核验：Seq1/1461/2921及Len1460/1460/1171；分片原编码0/185/370与GUI字节0/1480/2960；HTTP200和0.1835952
+s。579为505段、735723 B。</td>
+</tr>
+<tr>
+<td>所有图片路径可解析</td>
+<td>脚本检查Markdown相对链接、文件存在、PNG可解码；答辩21处、学习25处；不引用缺失图。</td>
+</tr>
+<tr>
+<td>隐私</td>
+<td>S01—S06可见区目视未见认证信息；旧图20字节区Set-Cookie已在发布副本整区遮挡并标注。源pcapng及旧图20原件仅留本地。保留本人实验地址用于字段说明。未执行全文件OCR，隐私结论限于交付可见区域及已选字段，不能推断全部历史流量无敏感内容。</td>
+</tr>
+<tr>
+<td>证据登记与验收报告</td>
+<td>两份均随包；evidence含选定字段TSV、统计、源文件指纹与历史图来源，不含HTTP完整负载。</td>
+</tr>
+<tr>
+<td>独立ZIP阅读</td>
+<td>两份Markdown、27张PNG、登记表、验收报告、离线HTML及证据选录一起打包；ZIP
+CRC、散列清单及重新解压后的路径检查见下方最终机器记录。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="实际验证方法">实际验证方法</h2>
+<ul>
+<li><code>python verify_and_preview.py</code>：检查输入清单、保护快照、PNG与相对路径、图片数量、25组八项模板、源副本指纹及关键帧字段断言。</li>
+<li><code>python -m py_compile gui_capture.py build_deliverables.py verify_and_preview.py</code>：辅助脚本语法检查；没有运行历史采集程序或宣称既往工程测试在本轮重跑。</li>
+<li>TShark 4.6.9 <code>-2 -r ... -Y ... -T fields</code>
+选录关键帧；<code>-q -z io,phs -z conv,tcp</code>
+复核全文件统计。精确字段见 <a
+href="evidence/关键帧字段.tsv">关键帧TSV</a>、<a
+href="evidence/TShark统计.txt">统计输出</a>。</li>
+<li>Pandoc按GFM生成HTML；Chrome离线加载并检查图片解码和页面宽度，抽查实际渲染。最终结果写入
+<code>evidence/交付验证结果.json</code>。</li>
+<li>用新的独立目录重新解压交付ZIP，检查CRC与SHA-256清单、Markdown图片路径；不覆盖旧ZIP。ZIP自身SHA-256记在包旁
+<code>.sha256</code> 文件。</li>
+</ul>
+<h2 id="事实修正与限制">事实修正与限制</h2>
+<ol type="1">
+<li>任务包“未取得原始pcapng”是移交快照的旧边界，本轮在本机找到原件，更新为只读核验及真实软件补拍；未重采网络流量。</li>
+<li>第579帧不再只是假设：35/36/37的 <code>tcp.reassembled_in</code>
+均579，四帧 <code>tcp.stream</code> 均1；505段重组735723
+B。首次单遍提取未显示反向引用，改用两遍解析后验证，未以空字段断言不存在。</li>
+<li>TShark <code>ip.frag_offset</code>编码单位8
+B，GUI按字节显示；已明确转换。GUI Protocol Hierarchy 的 Bytes 与 TShark
+io,phs输出采用不同统计口径，不把两者直接当作相同列。</li>
+<li>旧图20含Set-Cookie；因任务同时要求保留原图与发布材料无认证信息，采取本地保留原件、公开交付使用明确遮挡衍生图。原始pcapng不入包，所以便携包可独立阅读，但不能只靠包内文件重新交互分析原始报文。</li>
+<li>S05的清晰大字版仍可由学习者手动调整布局后另拍；当前真实图不承担精确Seq/Len证明，所有参数以字段表与协议树为准。</li>
+<li>未进行真人计时排练、全链路丢包测试、网关外侧NAT验证或现场重新捕获。652原帧与丢包0只沿用历史日志记载，不能称本轮新测统计。</li>
+</ol>
+<h2 id="状态文档">状态文档</h2>
+<p>仅向既有 <code>大作业/第四题/docs/CURRENT_STATUS.md</code>
+增补本轮结果；DECISIONS、PROJECT_CONTEXT、旧任务书、正式报告、PPT、既有ZIP/RAR与原始抓包均不改写。当前顶层目录不属于Git仓库，已实际运行git
+status并得到非仓库结果。</p>
+<h2 id="官方依据">官方依据</h2>
+<p>菜单与功能依据 <a
+href="https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html">Follow
+Stream</a>、<a
+href="https://www.wireshark.org/docs/wsug_html_chunked/ChStatHierarchy.html">Protocol
+Hierarchy</a>、<a
+href="https://www.wireshark.org/docs/wsug_html_chunked/ChStatConversations.html">Conversations</a>；协议标准链接保留在两份正文参考文献。官方说明用于功能和理论，不作为本次帧号或数值的证据。</p>
+<h2 id="最终验证记录">最终验证记录</h2>
+<p>2026-11-16：保护快照44个文件未改；任务包清单42项全部匹配；PNG共27张；答辩21/21、学习25/25图片在Chrome解码成功，均无横向溢出。答辩开头及S04、学习S06章节可见渲染抽查通过。无头浏览器滚动截图空白，改用原HTML章节的临时独立视口验证，未宣称逐页检查。Pandoc出现zh-CN翻译资源提醒，不影响正文UTF-8中文显示；正文已目视核对。辅助脚本语法、字段断言和相对路径检查通过。</p>
+</body>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Wireshark_答辩演示版_补充后</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>html{font:18px/1.7 "Microsoft YaHei",sans-serif;color:#1d2733;background:#f6f8fb}body{max-width:1400px;margin:30px auto;padding:35px;background:white}img{max-width:100%;height:auto;display:block}h1,h2,h3{line-height:1.3}h2{margin-top:2em;border-bottom:2px solid #ddd;padding-bottom:10px}blockquote{border-left:4px solid #2687ac;padding:8px 20px;margin-left:0;background:#edf6fa}table{border-collapse:collapse;font-size:.9em;max-width:100%}td,th{border:1px solid #c9d2dc;padding:6px;overflow-wrap:anywhere}code{overflow-wrap:anywhere}a{color:#146694}pre{white-space:pre-wrap}</style>
+</head>
+<body><nav style="padding:12px;background:#edf6fa"><a href="index.html">资料首页</a> · <a href="defense.html">答辩演示版</a> · <a href="learn.html">零基础学习版</a> · <a href="evidence.html">截图与操作证据</a></nav>
+<header id="title-block-header">
+<h1 class="title">Wireshark_答辩演示版_补充后</h1>
+</header>
+<h1 id="wireshark-答辩演示版补充后">Wireshark 答辩演示版（补充后）</h1>
+<blockquote>
+<p><strong>用途</strong>：现场投屏 + 逐页口述；建议演示约 8—10
+分钟，可根据教师要求删减。</p>
+<p><strong>素材</strong>：本次上传的《过程截图(1).zip》（浅色界面，主要证据）与此前《答辩演示.rar》（补充
+DNS、软件界面和分层信息）；截图均为原文件复制，未重绘报文内容。</p>
+<p><strong>本轮证据边界（2026-11-16）</strong>：本地已找到并只读核验
+2026-11-10 保存的权威
+<code>evidence/final_npcap/capture.pcapng</code>，共584帧。S01—S06是本轮对历史文件新拍的真实
+Wireshark 4.6.9
+窗口，<strong>不是新抓网络流量</strong>。原图21张在解压基线中保留；交付副本中的图20对含
+Set-Cookie
+的字节区做明确遮挡，其余20张原样复制。原始抓包不公开打包；文件指纹及选定字段见
+<a href="evidence.html">登记表</a> 和
+<code>evidence/</code>。帧号和流号只对该文件有效。</p>
+</blockquote>
+<blockquote>
+<p><strong>时间安排</strong>：保留原11环节与17幅关键旧图；原定约8分15秒，S02/S03合讲25秒、S04讲20秒、S01讲25秒，总计约9分25秒（建议值，未计真人排练）。S05/S06放学习版扩展。</p>
+</blockquote>
+<h2
+id="上场前准备顺序不计入答辩时长">上场前：准备顺序（不计入答辩时长）</h2>
+<ol type="1">
+<li>把此文件和 <code>assets/</code> 文件夹放在同一目录，用 VS Code
+Markdown 预览、Obsidian 阅读视图或支持 Markdown
+图片的播放器打开。<strong>不要只拷贝 <code>.md</code> 而丢掉
+<code>assets/</code></strong>。</li>
+<li>如需现场切到 Wireshark，提前在本机打开原始
+<code>capture.pcapng</code>；确保过滤栏绿色，截图中的帧号与当前文件一致。本机已核验原文件；换机时先核对SHA-256，不能仅凭同名文件沿用帧号。</li>
+<li>用 100% 缩放查看截图时可能看不清字段，单击图片放大；讲解时优先指向
+<strong>顶部报文列表 + 左下协议树</strong>。</li>
+<li><strong>区别三组样本</strong>：A 是 <code>example.com</code> 的完整
+HTTP 访问；B 是 <code>www.baidu.com</code> 的 TCP 分段；C 是面向网关的
+ICMP 与 IPv4 分片。这三组不是同一次 TCP 连接。</li>
+</ol>
+<hr />
+<h2 id="01开场实验目标与-wireshark-操作约-35-秒">01｜开场：实验目标与
+Wireshark 操作（约 35 秒）</h2>
+<p><img src="assets/01_软件界面.png"
+alt="图1 Wireshark 三区域与显示过滤栏" /></p>
+<p><strong>现场操作</strong>：如有抓包文件，<code>File → Open → capture.pcapng</code>，观察上方的报文列表、中部的协议字段树和右侧/下方的十六进制字节区。过滤栏输入
+<code>arp</code> 体验显示过滤。</p>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>各位老师好，我们的选题是“基于 Wireshark
+的协议分析实验”。实验在校园网环境下进行，目标不仅是捕获数据，还要解释数据为什么按照这样的协议顺序传输。我们先用
+ARP 和 ICMP 验证本地寻址与连通性，再分析 TCP
+建连、数据分段和释放，最后结合 DNS 与 HTTP，说明从校园网访问外部 Web
+服务器的完整过程。图中上方是数据包列表，下方展示所选报文的协议字段和原始字节。我们使用显示过滤器逐步定位证据，而不是仅凭报文颜色判断协议。</p>
+</blockquote>
+<p><strong>本页证明</strong>：实验分析采用“找到帧 → 查看字段 →
+关联上下文 →
+归纳原理”的方法。<strong>捕获过滤器</strong>决定抓取前保留哪些包；<strong>显示过滤器</strong>仅控制已有包的显示。</p>
+<h3 id="补充演示全文件协议层次统计">补充演示｜全文件协议层次统计</h3>
+<p><img src="assets/supplemental/S02_Protocol_Hierarchy.png"
+alt="全文件协议层次统计" /></p>
+<p><strong>现场操作</strong>：清空显示过滤器并回车 → Statistics →
+Protocol Hierarchy。</p>
+<p><strong>关键字段与答辩词</strong>：Frame 584；IPv4 582；TCP
+566（96.9%）；DNS 4；ARP 2。不同协议层可重复计入同帧。这些数据来自No
+display filter；584帧。</p>
+<p><strong>本图结论</strong>：补充软件界面；仅本文件统计。</p>
+<h3 id="补充演示tcp-通信对统计">补充演示｜TCP 通信对统计</h3>
+<p><img src="assets/supplemental/S03_TCP_Conversations.png"
+alt="TCP 通信对统计" /></p>
+<p><strong>现场操作</strong>：清空过滤器 → Statistics → Conversations →
+TCP。</p>
+<p><strong>关键字段与答辩词</strong>：stream 0：19664↔︎80，12帧，1.520183
+s；stream 1：19675↔︎80，554帧，0.249841
+s。这些数据来自全文件；两个TCP会话。</p>
+<p><strong>本图结论</strong>：确认两样本不同连接；图中Bytes为UI约数。</p>
+<h2
+id="02arp先找到本地网关的-mac-地址约-45-秒">02｜ARP：先找到本地网关的
+MAC 地址（约 45 秒）</h2>
+<p><img src="assets/02_ARP请求.png" alt="图2 ARP 请求：帧1" /></p>
+<p><img src="assets/03_ARP应答.png" alt="图3 ARP 应答：帧2" /></p>
+<p><strong>现场操作</strong>：输入 <code>arp</code>，选择帧 1、2，展开
+<code>Ethernet II</code> 与
+<code>Address Resolution Protocol</code>，对照
+<code>Opcode</code>、Sender/Target IP、Sender/Target MAC。</p>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>本机地址为 <code>10.110.238.17</code>，默认网关为
+<code>10.110.255.254</code>。帧 1 是 ARP 请求：本机还不知道网关对应的
+MAC，所以将以太网目的地址设为广播地址
+<code>ff:ff:ff:ff:ff:ff</code>，询问“谁拥有这个网关 IP”。请求的操作码是
+1，ARP 目标 MAC 全零意味着待解析。帧 2 是网关的应答，操作码变为 2，返回
+MAC 地址
+<code>28:e4:24:c1:60:02</code>。这样本机就知道：以后发往外网的帧，在本地这一跳应先交给网关。</p>
+</blockquote>
+<p><strong>本页证明</strong>：ARP 解析的是<strong>本地下一跳
+MAC</strong>，不是外部网站服务器的 MAC。</p>
+<h2
+id="03icmp通过报文字段验证回显请求与应答约-45-秒">03｜ICMP：通过报文字段验证回显请求与应答（约
+45 秒）</h2>
+<p><img src="assets/04_ICMP请求.png"
+alt="图4 ICMP Echo Request：帧3及同组回显报文" /></p>
+<p><img src="assets/05_ICMP应答.png"
+alt="图5 ICMP Echo Reply：帧4" /></p>
+<p><strong>现场操作</strong>：过滤 <code>icmp</code>；依次选择帧 3 和
+4，展开 <code>Internet Control Message Protocol</code>，定位
+<code>Type</code>、<code>Code</code>、<code>Checksum</code>、<code>Identifier</code>、<code>Sequence Number</code>、<code>Data</code>。</p>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>ICMP 是网络控制报文协议，常用于诊断可达性。图中帧 3 是 Echo
+Request，<code>Type=8、Code=0</code>；帧 4 是 Echo
+Reply，<code>Type=0、Code=0</code>。请求与应答的源、目的 IP
+正好相反，标识符和序列号可以帮助匹配同一轮 ping。帧 3 的 IPv4 总长度为
+60 字节，减去 20 字节 IPv4 首部和 8 字节 ICMP 首部，得到 32
+字节回显数据。它验证的是当时本机到网关的往返通信成功，不能据此推断校园网永远没有丢包。</p>
+</blockquote>
+<p><strong>本页证明</strong>：报文类型、标识和序列字段共同支撑“请求—应答”关系；<code>TTL</code>
+属于 IPv4 首部，而不是 ICMP 字段。</p>
+<h2 id="04tcp-三次握手连接是怎样建立的约-60-秒">04｜TCP
+三次握手：连接是怎样建立的（约 60 秒）</h2>
+<p><img src="assets/06_TCP三次握手_SYN.png"
+alt="图6 第一次握手：帧17 SYN" /></p>
+<p><img src="assets/07_TCP三次握手_SYNACK.png"
+alt="图7 第二次握手：帧19 SYN ACK" /></p>
+<p><img src="assets/08_TCP三次握手_ACK.png"
+alt="图8 第三次握手：帧20 ACK" /></p>
+<p><strong>现场操作</strong>：输入
+<code>frame.number == 17 || frame.number == 19 || frame.number == 20</code>，逐帧查看
+TCP 的 <code>Flags</code>、<code>Seq</code>、<code>Ack</code>，也可使用
+<code>tcp.stream == 0</code> 查看这一整条连接。</p>
+<table>
+<thead>
+<tr>
+<th>帧</th>
+<th>方向</th>
+<th>标志位</th>
+<th>相对序号</th>
+<th>原理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17</td>
+<td>本机 → <code>104.20.23.154:80</code></td>
+<td>SYN</td>
+<td>Seq=0</td>
+<td>发起连接</td>
+</tr>
+<tr>
+<td>19</td>
+<td>服务器 → 本机</td>
+<td>SYN, ACK</td>
+<td>Seq=0, Ack=1</td>
+<td>确认客户端的 SYN，同时同步服务器序号</td>
+</tr>
+<tr>
+<td>20</td>
+<td>本机 → 服务器</td>
+<td>ACK</td>
+<td>Seq=1, Ack=1</td>
+<td>确认服务器 SYN，连接建立</td>
+</tr>
+</tbody>
+</table>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>TCP 是面向连接的传输协议。第一次握手由客户端发送
+SYN，第二次由服务器返回 SYN 和 ACK，第三次由客户端再发 ACK。这里
+Wireshark 默认显示相对序列号，所以首个 SYN 看起来是
+<code>Seq=0</code>，并不是 TCP
+真正的随机初始序列号固定等于零。第二次握手的 <code>Ack=1</code>，是因为
+SYN
+本身消耗一个序号。三次握手使双方确认收发方向可用，并同步传输所需的初始序号及协商参数。本次示例连接的客户端端口是
+19664，服务器端口是 80。</p>
+</blockquote>
+<p><strong>本页证明</strong>：<code>SYN → SYN,ACK → ACK</code>
+的三帧顺序与 <code>Seq/Ack</code> 关系对应 TCP 建连机制。</p>
+<h2 id="05tcp-连接释放为什么看到四个关键帧约-40-秒">05｜TCP
+连接释放：为什么看到四个关键帧（约 40 秒）</h2>
+<p><img src="assets/09_TCP四次挥手.png"
+alt="图9 TCP 连接释放：帧25、26、27、290" /></p>
+<p><strong>现场操作</strong>：输入
+<code>frame.number == 25 || frame.number == 26 || frame.number == 27 || frame.number == 290</code>，比较方向、标志位以及
+<code>Seq/Ack</code>。</p>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>本次连接由服务器先发起释放：帧 25 是 <code>FIN,ACK</code>，帧 26
+是客户端确认，帧 27 客户端也发送 <code>FIN,ACK</code>，最后帧 290
+是服务器确认。FIN 和 SYN 一样会占用一个序号。例如服务器发送
+<code>Seq=929</code> 的 FIN 后，客户端确认号是 <code>Ack=930</code>。帧
+290
+与前面帧号相差很远，是因为抓包文件同时记录了其他连接；并不表示同一连接中间丢掉了
+263 个包。这里是本次观察到的四个事件，实际 TCP 释放也可能合并报文。</p>
+</blockquote>
+<p><strong>本页证明</strong>：TCP 可以分别关闭两个方向；FIN、ACK
+的对应关系可由序号验证。</p>
+<h2 id="06tcp-数据分段一条字节流为什么分成多个段约-45-秒">06｜TCP
+数据分段：一条字节流为什么分成多个段（约 45 秒）</h2>
+<p><img src="assets/10_TCP数据分段.png"
+alt="图10 百度样本的 TCP 数据分段：帧35—37" /></p>
+<p><strong>现场操作</strong>：输入
+<code>frame.number &gt;= 35 &amp;&amp; frame.number &lt;= 37</code>；查看
+TCP
+<code>Sequence Number</code>、<code>Next Sequence Number</code>、<code>TCP Segment Len</code>。</p>
+<table>
+<thead>
+<tr>
+<th>帧</th>
+<th style="text-align: right;">相对 Seq</th>
+<th style="text-align: right;">TCP 数据长度</th>
+<th style="text-align: right;">Next Seq</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>35</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1460 B</td>
+<td style="text-align: right;">1461</td>
+</tr>
+<tr>
+<td>36</td>
+<td style="text-align: right;">1461</td>
+<td style="text-align: right;">1460 B</td>
+<td style="text-align: right;">2921</td>
+</tr>
+<tr>
+<td>37</td>
+<td style="text-align: right;">2921</td>
+<td style="text-align: right;">1171 B</td>
+<td style="text-align: right;">4092</td>
+</tr>
+</tbody>
+</table>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>这组数据来自对 <code>www.baidu.com</code> 的另一条 TCP
+连接，并非前面的 <code>example.com</code>。第一段携带 1460
+字节，下一段就从序号 1461 开始；第三段从 2921 开始，说明 TCP
+按字节连续编号。对前两段，<code>14 字节以太网首部 + 20 字节 IPv4 首部 + 20 字节 TCP 首部 + 1460 字节数据 = 1514 字节</code>，其中
+IPv4 部分恰为 1500 字节。这是 TCP
+把应用字节流分成多个段，不表示这些帧发生了 IPv4 分片。</p>
+</blockquote>
+<p><strong>本页证明</strong>：TCP
+以字节为单位编号、可跨多个段传输一份应用响应；前三段不代表完整网页大小。</p>
+<h2 id="07ipv4-分片同一个-ip-数据报怎样拆成三片约-60-秒">07｜IPv4
+分片：同一个 IP 数据报怎样拆成三片（约 60 秒）</h2>
+<p><img src="assets/11_IPv4数据报分片.png"
+alt="图11 发往网关的大 ICMP 请求对应 IPv4 分片：帧9—11" /></p>
+<p><strong>现场操作</strong>：输入
+<code>frame.number &gt;= 9 &amp;&amp; frame.number &lt;= 14</code>，查看请求方向的帧
+9、10、11，展开 IPv4 的
+<code>Identification</code>、<code>Total Length</code>、<code>More Fragments</code>、<code>Fragment Offset</code>。</p>
+<table>
+<thead>
+<tr>
+<th>帧</th>
+<th style="text-align: right;">IP 总长度</th>
+<th style="text-align: right;">IP 载荷</th>
+<th style="text-align: right;">偏移（字节）</th>
+<th style="text-align: right;">MF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td style="text-align: right;">1500 B</td>
+<td style="text-align: right;">1480 B</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>10</td>
+<td style="text-align: right;">1500 B</td>
+<td style="text-align: right;">1480 B</td>
+<td style="text-align: right;">1480</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>11</td>
+<td style="text-align: right;">1068 B</td>
+<td style="text-align: right;">1048 B</td>
+<td style="text-align: right;">2960</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>这里是第三组独立实验：向校园网网关发送了一个较大的 ICMP
+回显报文。三片的 IPv4 标识值相同，都是 <code>0x5a7b</code>。因为链路 MTU
+是 1500 字节，每片要留出 20 字节 IPv4 首部，前两片最多各装 1480
+字节载荷。偏移分别是 0、1480、2960 字节，彼此首尾相接，最后一片
+<code>MF=0</code> 表示后面没有更多分片。总 IP 载荷是
+<code>1480+1480+1048=4008</code> 字节，加上原本 20 字节 IP 首部，原始 IP
+数据报应为 4028 字节，所以需要分片。注意 TCP
+分段发生在传输层，而这里发生在 IPv4 网络层。</p>
+</blockquote>
+<p><strong>本页证明</strong>：使用
+<code>Identification + MF + Offset + 长度</code> 可以验证分片关系；IPv4
+原始片偏移字段以 <strong>8
+字节</strong>为单位，界面已换算为字节偏移。</p>
+<h3 id="补充演示三片-ipv4-重组">补充演示｜三片 IPv4 重组</h3>
+<p><img src="assets/supplemental/S04_IPv4_Reassembly.png"
+alt="三片 IPv4 重组" /></p>
+<p><strong>现场操作</strong>：frame.number &gt;= 9 &amp;&amp;
+frame.number &lt;= 11 → 选11 → 展开IPv4、Flags、3 IPv4 Fragments。</p>
+<p><strong>关键字段与答辩词</strong>：ID=0x5a7b；末片MF未设置；偏移2960
+B；三片1480+1480+1048=4008
+B。这些数据来自9/10/11；网关ICMP请求方向。</p>
+<p><strong>本图结论</strong>：补充图11；真实3片关联树。</p>
+<h2 id="08dns域名怎样找到网站-ip约-35-秒">08｜DNS：域名怎样找到网站
+IP（约 35 秒）</h2>
+<p><img src="assets/12_DNS解析.png"
+alt="图12 原答辩演示补充的 DNS 查询与应答：帧15、16、28、29" /></p>
+<p><strong>现场操作</strong>：输入 <code>dns</code>；选择帧 15 和
+16，展开 <code>Domain Name System</code>
+的查询与应答信息。必要时再比较帧 28、29 的百度域名解析。</p>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>打开网站时，用户使用域名，而 IP 层需要地址。帧 15 向校园网配置的 DNS
+服务器查询 <code>example.com</code>，帧 16 返回了 IP 地址，其中本次 TCP
+连接使用了 <code>104.20.23.154</code>。另一组帧 28、29 是
+<code>www.baidu.com</code> 的解析，属于前面 TCP 分段样本。DNS
+解决的是域名到地址的映射，ARP 解决的是本地下一跳 IP 到 MAC
+的映射，两者作用不同。</p>
+</blockquote>
+<p><strong>本页证明</strong>：本次 Web 主线使用的服务器 IP 与 DNS
+应答相互吻合。</p>
+<h2 id="09http-请求与响应网页内容怎样交换约-50-秒">09｜HTTP
+请求与响应：网页内容怎样交换（约 50 秒）</h2>
+<p><img src="assets/13_HTTP请求.png"
+alt="图13 HTTP 请求：帧21 GET" /></p>
+<p><img src="assets/14_HTTP响应.png"
+alt="图14 HTTP 响应：帧24 200 OK" /></p>
+<p><strong>现场操作</strong>：使用
+<code>http.request || http.response</code>；选择帧 21、24，依次展开
+<code>Hypertext Transfer Protocol</code>。如要连握手也看到，改用
+<code>tcp.stream == 0</code>。</p>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>TCP 连接建立之后，客户端在帧 21 发送
+<code>GET / HTTP/1.1</code>，并携带
+<code>Host: example.com</code>，表示请求这个站点的首页。帧 24 收到了
+<code>HTTP/1.1 200 OK</code> 响应，说明服务器成功处理了这次 HTTP
+请求。该响应在 Wireshark 中包含 TCP
+重组信息，因此不能简单认为整个响应都装在帧 24 的单个 TCP
+载荷里。截图给出的从请求到响应的观察间隔约为 183.6
+毫秒，但它包含服务器处理等因素，不能直接当作纯网络 RTT。</p>
+</blockquote>
+<p><strong>本页证明</strong>：一次 <code>GET</code> 请求及其
+<code>200 OK</code> 响应构成可观察的 HTTP/1.1 交互。此处是明文
+HTTP，不代表 HTTPS 内容同样能直接读取。</p>
+<h3 id="补充演示追踪-examplecom-双向-tcp-字节流">补充演示｜追踪
+example.com 双向 TCP 字节流</h3>
+<p><img src="assets/supplemental/S01_Follow_TCP_Stream.png"
+alt="追踪 example.com 双向 TCP 字节流" /></p>
+<p><strong>现场操作</strong>：frame.number == 21 → 选中21 → Analyze →
+Follow → TCP Stream。</p>
+<p><strong>关键字段与答辩词</strong>：GET /、Host: example.com 与
+HTTP/1.1 200 OK 同流；137 B 请求+928 B响应=1065
+B。这些数据来自tcp.stream == 0，12帧；应用字节流1065 B。</p>
+<p><strong>本图结论</strong>：补充图13/14；无可见认证字段。</p>
+<h2
+id="10核心综合分析同一帧怎样同时看到-maciptcp-与-http约-55-秒">10｜核心综合分析：同一帧怎样同时看到
+MAC、IP、TCP 与 HTTP（约 55 秒）</h2>
+<p><img src="assets/15_Web链路层.png"
+alt="图15 Web 请求的链路层 Ethernet II：帧21" /></p>
+<p><img src="assets/16_Web网络层.png"
+alt="图16 Web 请求的网络层 IPv4：帧21" /></p>
+<p><img src="assets/17_Web传输层.png"
+alt="图17 Web 请求的传输层 TCP：帧21" /></p>
+<p><strong>现场操作</strong>：输入
+<code>frame.number == 21</code>，在同一帧依次展开
+<code>Ethernet II → Internet Protocol Version 4 → Transmission Control Protocol → Hypertext Transfer Protocol</code>。这里三图是旧压缩包补充的同一报文不同层级截图。</p>
+<table>
+<thead>
+<tr>
+<th>层次</th>
+<th>本次帧 21 的字段</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>链路层</td>
+<td><code>9c:b1:50:e0:50:f6 → 28:e4:24:c1:60:02</code></td>
+<td>先送到本地网关 MAC</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td><code>10.110.238.17 → 104.20.23.154</code></td>
+<td>指向最终 Web 服务器 IP</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td><code>19664 → 80</code></td>
+<td>定位客户端 TCP 会话与服务器 HTTP 服务端口</td>
+</tr>
+<tr>
+<td>应用层</td>
+<td><code>GET / HTTP/1.1</code>、<code>Host: example.com</code></td>
+<td>说明具体访问的网页资源</td>
+</tr>
+</tbody>
+</table>
+<p><strong>答辩词</strong></p>
+<blockquote>
+<p>这一帧是整个实验最重要的综合证据。我们逐层展开同一个帧
+21：以太网层的目标 MAC 是本地网关，而网络层目的 IP
+却是外部服务器。这不是矛盾，因为 MAC 负责当前这一跳，IP
+负责跨网络寻址。TCP 层用端口号区分应用通信，最后 HTTP
+说明要请求什么资源。也就是说，HTTP 数据被 TCP 段承载，再封装进 IPv4
+数据报，最后封装进本地链路的帧。抓包位置在本机，因此只能直接证明本机所见的链路与协议字段，不能说我们观察到了互联网中每台路由器的内部转发。</p>
+</blockquote>
+<p><strong>本页证明</strong>：完成题目要求的 <strong>MAC → IP → TCP →
+HTTP</strong> 逐层分析。</p>
+<h2 id="11结束语约-20-秒">11｜结束语（约 20 秒）</h2>
+<blockquote>
+<p>通过这次实验，我们不只认识了 Wireshark
+的过滤器，还用实际字段解释了：ARP 如何发现网关 MAC、ICMP
+如何报告回显结果、TCP 如何建立和释放连接、如何按字节分段、IPv4
+为什么会分片，以及 DNS 和 HTTP
+怎样协同完成一次外网访问。不同结论分别对应明确的帧号和截图。以上是我们的答辩内容，谢谢老师。</p>
+</blockquote>
+<hr />
+<h2 id="附录-a答辩现场过滤器速查卡">附录 A｜答辩现场“过滤器速查卡”</h2>
+<table>
+<thead>
+<tr>
+<th>目标</th>
+<th>显示过滤器</th>
+<th>要看的证据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ARP</td>
+<td><code>arp</code></td>
+<td>1/2 的请求和应答</td>
+</tr>
+<tr>
+<td>ICMP</td>
+<td><code>icmp</code></td>
+<td>3/4 的 Type、Code、ID、Seq</td>
+</tr>
+<tr>
+<td>TCP 三次握手</td>
+<td>`frame.number == 17</td>
+<td></td>
+</tr>
+<tr>
+<td>单条 Web TCP 连接</td>
+<td><code>tcp.stream == 0</code></td>
+<td>含建连、HTTP、释放的全部 TCP 帧</td>
+</tr>
+<tr>
+<td>TCP 释放</td>
+<td>`frame.number == 25</td>
+<td></td>
+</tr>
+<tr>
+<td>TCP 分段</td>
+<td><code>frame.number &gt;= 35 &amp;&amp; frame.number &lt;= 37</code></td>
+<td>Seq 和 Len</td>
+</tr>
+<tr>
+<td>IP 分片</td>
+<td><code>frame.number &gt;= 9 &amp;&amp; frame.number &lt;= 14</code></td>
+<td>ID、MF、Offset</td>
+</tr>
+<tr>
+<td>所有分片候选</td>
+<td>`ip.flags.mf == 1</td>
+<td></td>
+</tr>
+<tr>
+<td>DNS</td>
+<td><code>dns</code></td>
+<td>15/16 和 28/29</td>
+</tr>
+<tr>
+<td>HTTP 请求/响应</td>
+<td>`http.request</td>
+<td></td>
+</tr>
+<tr>
+<td>跨层分析</td>
+<td><code>frame.number == 21</code></td>
+<td>Ethernet II / IPv4 / TCP / HTTP</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>说明</strong>：上表均为显示过滤器，输入位置是 Wireshark
+主窗口顶部绿色过滤栏；不是在开始抓包前的 Capture Filter 中输入。</p>
+</blockquote>
+<h2 id="附录-b被老师追问时的简短回答">附录
+B｜被老师追问时的简短回答</h2>
+<p><strong>1. 为什么 Wi-Fi 抓包显示 Ethernet II，而非 802.11？</strong>
+普通 Windows + Npcap WLAN 抓包可能以网卡提供的 Ethernet II
+链路格式显示；不能据此宣称抓到了完整 802.11 空口管理帧。</p>
+<p><strong>2. ARP 和 DNS 有什么区别？</strong> DNS 解决域名到 IP
+的查询；ARP 解决本地 IP/下一跳 IP 到 MAC 的地址解析。</p>
+<p><strong>3. TCP 分段与 IP 分片是一回事吗？</strong> 不是。TCP
+分段在传输层，以字节序号组织数据；IPv4 分片在网络层，针对一个过大的 IPv4
+数据报使用 ID、MF 和 Fragment Offset 组织分片。</p>
+<p><strong>4. 为什么 Seq=0？</strong> Wireshark
+默认启用“相对序列号”；展开 TCP 还能看到原始序列号。</p>
+<p><strong>5. 为什么第 27 帧后是第 290 帧？</strong>
+帧号是整个抓包文件的全局编号，中间可以插入其他连接的报文。只看该连接时用
+<code>tcp.stream == 0</code>。</p>
+<p><strong>6. <code>Checksum Unverified</code> 表示报文错误吗？</strong>
+不一定；可能受本机网卡校验和卸载、验证设置及抓包位置影响，不能直接判定链路错误。</p>
+<p><strong>7. 是否能从本机截图证明 NAT 的映射和公网出口？</strong>
+不能；本机只能看见本机发出的私有地址报文，不能据此确定网关外侧 NAT
+映射详情。</p>
+<p><strong>8. HTTP 和 HTTPS 抓包有什么区别？</strong> 本次明文 HTTP/1.1
+的方法、请求头和状态行可直接查看；HTTPS 通常经 TLS
+加密，未获解密条件时不能直接读取这些应用数据。</p>
+<p><strong>9. 这些截图是现在现场新抓的吗？</strong>
+不是。这些是之前实验保存的真实抓包截图。旧演示稿将采集日期记录为 2026 年
+11 月 10
+日；本轮只读复核584帧，并新增S01—S06软件窗口截图；未再次抓取网络流量。</p>
+<p><strong>10. 如何说明你们确实会用 Wireshark？</strong> 现场展示
+<code>arp</code>、<code>icmp</code>、<code>tcp.stream == 0</code>、<code>frame.number == 21</code>
+等显示过滤，展开协议树解释关键字段，而不是只翻静态图片。</p>
+<h2 id="附录-c参考资料">附录 C｜参考资料</h2>
+<p>[1] Wireshark Foundation. <a
+href="https://www.wireshark.org/docs/wsug_html/">Wireshark User's
+Guide</a>.</p>
+<p>[2] Wireshark Foundation. <a
+href="https://www.wireshark.org/docs/man-pages/wireshark-filter.html">Wireshark
+Display Filter Syntax</a>.</p>
+<p>[3] D. Plummer. <a href="https://www.rfc-editor.org/rfc/rfc826">RFC
+826: An Ethernet Address Resolution Protocol</a>.</p>
+<p>[4] J. Postel. <a href="https://www.rfc-editor.org/rfc/rfc792">RFC
+792: Internet Control Message Protocol</a>.</p>
+<p>[5] J. Postel. <a href="https://www.rfc-editor.org/rfc/rfc791">RFC
+791: Internet Protocol</a>.</p>
+<p>[6] W. Eddy (Ed.). <a
+href="https://www.rfc-editor.org/rfc/rfc9293">RFC 9293: Transmission
+Control Protocol</a>.</p>
+<p>[7] P. Mockapetris. <a
+href="https://www.rfc-editor.org/rfc/rfc1035">RFC 1035: Domain
+Names—Implementation and Specification</a>.</p>
+<p>[8] R. Fielding et al. <a
+href="https://www.rfc-editor.org/rfc/rfc9110">RFC 9110: HTTP
+Semantics</a>.</p>
+<p>[9] R. Fielding et al. <a
+href="https://www.rfc-editor.org/rfc/rfc9112">RFC 9112:
+HTTP/1.1</a>.</p>
+<blockquote>
+<p>参考文献用于协议规则和软件功能的标准定义；实际帧号和测量值来自历史截图以及本轮只读核验的权威抓包（详见登记表），不由
+RFC 证明。</p>
+</blockquote>
+</body>
+</html>
